@@ -10,11 +10,11 @@
 ### Frontend (Angular)
 1. Navigate to the frontend directory:
    ```bash
-   cd SPA/frontend
+   cd SPA
    ```
 2. Install dependencies (if not already installed):
    ```bash
-   npm install
+   npm install --force
    ```
 3. Start the development server:
    ```bash
