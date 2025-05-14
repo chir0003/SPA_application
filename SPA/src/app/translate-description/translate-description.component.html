@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>Translate Package Descriptions</h2>
+  
+    <!-- Loop through each package -->
+    <div *ngFor="let package of packages" class="row mb-3">
+      <div class="col">
+        <p><strong>Package ID:</strong> {{ package.id }}</p>
+        <p><strong>Description:</strong> {{ package.description }}</p>
+      </div>
+  
+      <!-- Language selection -->
+      <div class="col">
+        <select [(ngModel)]="selectedLanguage" class="form-select">
+          <option value="" disabled>Select target language</option>
+          <option *ngFor="let language of languages" [value]="language">{{ language }}</option>
+        </select>
+      </div>
+  
+      <!-- Translate button -->
+      <div class="col">
+        <button (click)="translateDescription(package.description)" class="btn btn-primary">Translate</button>
+      </div>
+    </div>
+    
+    <!-- Success message -->
+    <div *ngIf="isSuccess" class="alert alert-success">
+      {{ message }}
+    </div>
+  
+    <!-- Error message -->
+    <div *ngIf="!isSuccess && message" class="alert alert-danger">
+      {{ message }}
+    </div>
+  </div>
+  

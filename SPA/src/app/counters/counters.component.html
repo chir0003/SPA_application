@@ -1,0 +1,52 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Database Operation Statistics</h2>
+  
+    <!-- Error Message -->
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+  
+    <!-- Display statistics if counts is available -->
+    <div *ngIf="counts">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card bg-light mb-3">
+            <div class="card-header"><strong>Create Operations</strong></div>
+            <div class="card-body">
+              <p class="card-text">{{ counts.create }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card bg-light mb-3">
+            <div class="card-header"><strong>Delete Operations</strong></div>
+            <div class="card-body">
+              <p class="card-text">{{ counts.delete }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card bg-light mb-3">
+            <div class="card-header"><strong>Retrieve Operations</strong></div>
+            <div class="card-body">
+              <p class="card-text">{{ counts.retrieve }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card bg-light mb-3">
+            <div class="card-header"><strong>Update Operations</strong></div>
+            <div class="card-body">
+              <p class="card-text">{{ counts.update }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Show a message when no data is available -->
+    <div *ngIf="!counts && !errorMessage" class="alert alert-info">
+      No statistics available at the moment.
+    </div>
+  </div>
+  

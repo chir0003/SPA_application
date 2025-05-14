@@ -1,0 +1,35 @@
+<div class="container mt-5 d-flex justify-content-center">
+    <div style="width: 18rem;">
+      <h2 class="text-center">Update Package</h2>
+      <form #updatePackageForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-outline mb-3">
+          <label for="package_id">Package ID</label>
+          <input
+            type="text"
+            id="package_id"
+            name="package_id"
+            class="form-control"
+            required
+            [(ngModel)]="package.package_id"
+            #packageId="ngModel"
+          />
+        </div>
+  
+        <div class="form-outline mb-3">
+          <label for="destination">New Package Destination</label>
+          <input
+            type="text"
+            id="destination"
+            name="destination"
+            class="form-control"
+            required
+            [(ngModel)]="package.package_destination"
+            #destination="ngModel"
+          />
+        </div>
+  
+        <button type="submit" class="btn btn-primary btn-block mb-3" [disabled]="updatePackageForm.invalid">Update Package</button>
+      </form>
+    </div>
+  </div>
+  

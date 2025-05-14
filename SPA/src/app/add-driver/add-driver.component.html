@@ -1,0 +1,63 @@
+<div class="container mt-5 d-flex justify-content-center">
+  <div style="width: 18rem;">
+    <h1 class="text-center">Add Driver</h1>
+    <form #driverForm="ngForm" (ngSubmit)="onSubmit(driverForm)">
+      <div class="form-outline mb-3">
+        <label for="driver_name">Name</label>
+        <input
+          type="text"
+          id="driver_name"
+          name="driver_name"
+          class="form-control"
+          placeholder="Enter Name"
+          [(ngModel)]="driver.driver_name" 
+          required
+          pattern="^[A-Za-z]{3,20}$"
+        />
+      </div>
+
+      <div class="form-outline mb-3">
+        <label for="driver_department">Department</label>
+        <select
+          id="driver_department"
+          name="driver_department"
+          class="form-control"
+          [(ngModel)]="driver.driver_department"
+          required
+        >
+          <option value="" disabled selected>Select Department</option>
+          <option value="food">Food</option>
+          <option value="furniture">Furniture</option>
+          <option value="electronic">Electronic</option>
+        </select>
+      </div>
+
+      <div class="form-outline mb-3">
+        <label for="driver_licence">License</label>
+        <input
+          type="text"
+          id="driver_licence"
+          name="driver_licence"
+          class="form-control"
+          placeholder="Enter Driver License"
+          [(ngModel)]="driver.driver_licence" 
+          required
+          pattern="^[A-Za-z0-9]{5}$"
+        />
+      </div>
+
+      <div class="form-check form-switch d-flex justify-content-start mb-3">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="driver_isActive"
+          name="driver_isActive"
+          [(ngModel)]="driver.driver_isActive"
+        />
+        <label for="driver_isActive">Is Active?</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block mb-3">Submit</button>
+    </form>
+  </div>
+</div>

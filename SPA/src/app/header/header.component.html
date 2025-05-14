@@ -1,0 +1,60 @@
+
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-8">
+              <div class="card mt-5 highlight-box">
+                  <div class="card-body text-center">
+                      <h2 class="card-title">Welcome to the Project</h2>
+                      <p class="card-text">Student Name: Chirag Kumar</p>
+                      <p class="card-text">Student ID: 34073604</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  
+  <!-- Navigation Menu -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/dashboard">Home</a>
+        </li>
+  
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="driversDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Drivers
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="driversDropdown">
+              <li><a class="dropdown-item" routerLink="/add-driver">Add Driver</a></li>
+              <li><a class="dropdown-item" routerLink="/list-drivers">List All Drivers</a></li>
+              <li><a class="dropdown-item" routerLink="/update-driver">Update Driver</a></li>
+              <li><a class="dropdown-item" routerLink="/delete-driver">Delete Driver</a></li>
+            </ul>
+          </li>
+  
+        <!-- Packages Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="packagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Packages
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="packagesDropdown">
+              <li><a class="dropdown-item" routerLink="/add-packages">Add Package</a></li>
+              <li><a class="dropdown-item" routerLink="/list-packages">List All Packages</a></li>
+              <li><a class="dropdown-item" routerLink="/update-packages">Update Package</a></li>
+              <li><a class="dropdown-item" routerLink="/delete-package">Delete Package</a></li>
+            </ul>
+          </li>
+  
+        <!-- Stats Link -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/counters">Stats</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+ 
+
+  

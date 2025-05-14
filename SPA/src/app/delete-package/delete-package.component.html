@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Delete Package</h1>
+  
+    <form (ngSubmit)="onDelete()">
+      <div class="form-group">
+        <label for="package_id">Package ID</label>
+        <input
+          type="text"
+          id="package_id"
+          class="form-control"
+          [(ngModel)]="packageId"
+          name="package_id"
+          required
+        />
+      </div>
+  
+      <button type="submit" class="btn btn-danger mt-3">Delete Package</button>
+    </form>
+  
+    <div *ngIf="message" class="mt-3 alert" [ngClass]="{'alert-success': isSuccess, 'alert-danger': !isSuccess}">
+      {{ message }}
+    </div>
+</div>
